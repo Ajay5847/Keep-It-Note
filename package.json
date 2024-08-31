@@ -8,7 +8,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "esbuild app/javascript/application.js --bundle --sourcemap --format=esm --outdir=app/assets/builds --public-path=/assets"
   },
   "repository": {
     "type": "git",
@@ -20,7 +21,12 @@
     "url": "https://github.com/Ajay5847/Keep-It-Note/issues"
   },
   "homepage": "https://github.com/Ajay5847/Keep-It-Note#readme",
+  "devDependencies": {
+    "esbuild": "^0.23.1"
+  },
   "dependencies": {
+    "@hotwired/stimulus": "^3.2.2",
+    "@hotwired/turbo-rails": "^8.0.5",
     "alpinejs": "^3.14.1"
   }
 }
